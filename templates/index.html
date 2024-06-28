@@ -1,0 +1,82 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="hero" style="background-image: url('{{ url_for('static', filename='images/hero-bg.png') }}');">
+    <div class="hero-content">
+        <h1>Welcome to the Environment Website</h1>
+        <p>Learn about environmental pollution and how to reduce your carbon footprint.</p>
+    </div>
+</section>
+
+<h2>Calculate Your Carbon Footprint</h2>
+<form method="post" action="{{ url_for('calculate') }}">
+    <label for="distance">Distance Traveled (km):</label>
+    <input type="number" id="distance" name="distance" required>
+
+    <label for="fuel_efficiency">Fuel Efficiency (km/l):</label>
+    <input type="number" id="fuel_efficiency" name="fuel_efficiency" required>
+
+    <button type="submit">Calculate</button>
+</form>
+
+<h2>Past Calculations</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Distance (km)</th>
+        <th>Fuel Efficiency (km/l)</th>
+        <th>Carbon Footprint (kg CO2)</th>
+    </tr>
+    {% for calc in calculations %}
+    <tr>
+        <td>{{ calc.id }}</td>
+        <td>{{ calc.distance }}</td>
+        <td>{{ calc.fuel_efficiency }}</td>
+        <td>{{ calc.carbon_footprint }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="card take-action">
+    <h2>Take Action</h2>
+    <p>Find out how you can reduce your carbon footprint, learn more about environmental pollution, and see global efforts.</p>
+    <div class="actions">
+        <div class="action-item">
+            <img src="{{ url_for('static', filename='images/about.png') }}" alt="About Carbon Footprint">
+            <h3>About Carbon Footprint</h3>
+            <p>Learn about the impact of your daily activities on the environment and how to measure it.</p>
+            <a href="{{ url_for('about_carbon_footprint') }}" class="button">Learn More</a>
+        </div>
+        <div class="action-item">
+            <img src="{{ url_for('static', filename='images/reduce.png') }}" alt="Reduce Pollution">
+            <h3>Reduce Pollution</h3>
+            <p>Discover effective ways to reduce pollution and your carbon footprint through everyday actions.</p>
+            <a href="{{ url_for('reduce') }}" class="button">Learn More</a>
+        </div>
+    </div>
+    <div class="action-item full-width">
+        <img src="{{ url_for('static', filename='images/global.png') }}" alt="Global Efforts">
+        <h3>Global Efforts</h3>
+        <p>See how countries and organizations worldwide are working together to combat climate change.</p>
+        <a href="{{ url_for('global_efforts') }}" class="button">Learn More</a>
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo1.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo1_thumbnail.jpg') }}" alt="Photo 1">
+    </div>
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo2.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo2_thumbnail.jpg') }}" alt="Photo 2">
+    </div>
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo3.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo3_thumbnail.jpg') }}" alt="Photo 3">
+    </div>
+</div>
+
+<div class="modal" id="gallery-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+
+{% endblock %}

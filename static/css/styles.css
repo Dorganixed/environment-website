@@ -1,0 +1,1459 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1em 0;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px;
+    margin-right: 55;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+    background-color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul li a:active {
+    background-color: #388E3C;
+    color: white;
+}
+
+header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(213, 207, 207, 0.1);
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header nav ul li .dropdown li {
+    width: 200px;
+}
+
+header nav ul li .dropdown li a {
+    padding: 10px;
+    display: block;
+}
+
+header nav ul li .dropdown li a:hover {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* Diğer Stil Ayarları */
+/* ... Diğer stiller ... */
+
+
+/* Hero Bölümü */
+.hero {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.hero .button {
+    background-color: #388E3C;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .button:hover {
+    background-color: #2E7D32;
+    transform: scale(1.05);
+}
+
+/* Ana İçerik */
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+p {
+    margin: 1em 0;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #388E3C;
+    text-decoration: underline;
+}
+
+/* Tablo Stil Ayarları */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1em);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Temel Stil Ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Tema Modları */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1em 0;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+    background-color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul li a:active {
+    background-color: #388E3C;
+    color: white;
+}
+
+/* Diğer CSS kodlarınızı buraya ekleyin */
+
+/* header içinde navigasyon ve butonları hizalama */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--header-background);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+header nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+header nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+header #theme-toggle {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header #theme-toggle:hover {
+    background-color: var(--button-background-hover);
+}
+
+header #theme-toggle:active {
+    background-color: var(--button-background-active);
+}
+
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header.dark-mode, footer.dark-mode, .navbar.dark-mode {
+    background-color: #2E7D32;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75em;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #444;
+}
+
+.navbar a.active {
+    background-color: #666;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header.light-mode, footer.light-mode, .navbar.light-mode {
+    background-color: #4CAF50;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #388E3C;
+}
+
+
+
+
+
+
+/* Form Stil Ayarları */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    animation: slideIn 1s ease-in-out;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+form input[type="number"], form input[type="text"], form input[type="email"], form textarea, form select {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+form input[type="number"]:focus, form input[type="text"]:focus, form input[type="email"]:focus, form textarea:focus, form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+form button {
+    padding: 0.75em;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+form button:active {
+    background-color: #2E7D32;
+}
+
+/* Footer Stil Ayarları */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+* Kartlar ve Butonlar */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    margin: 1em 0;
+    transition: transform 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #2E7D32;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Take Action Bölümü */
+.take-action {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.take-action .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.take-action h2 {
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.take-action .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.take-action .action-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.take-action .action-item:hover {
+    transform: translateY(-10px);
+}
+
+.take-action .action-item img {
+    max-width: 100px;
+    margin-bottom: 1em;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.take-action .action-item img:hover {
+    transform: rotate(10deg);
+    filter: brightness(1.1);
+}
+
+.take-action .action-item h3 {
+    margin-bottom: 0.5em;
+    color: #4CAF50;
+}
+
+.take-action .action-item p {
+    margin-bottom: 1em;
+    color: #666;
+}
+
+
+/* Duyarlılık Ayarları */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    form {
+        gap: 1em;
+    }
+
+    form label {
+        margin-bottom: 0.3em;
+    }
+
+    .take-action .actions {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/* İlerlemeli Web Uygulaması Özellikleri */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    header, footer {
+        background-color: #2E7D32;
+    }
+
+    main {
+        background-color: #444;
+        color: #f4f4f4;
+    }
+
+    table {
+        background-color: #555;
+    }
+
+    th {
+        background-color: #666;
+    }
+
+    tr:nth-child(even) {
+        background-color: #777;
+    }
+
+    .card {
+        background-color: #444;
+    }
+
+    .content-container {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #353232;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section {
+        margin-bottom: 20px;
+    }
+    
+    .section h2 {
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+    
+    .section ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+    
+    .section ul li {
+        margin-bottom: 10px;
+    }
+    
+    /* Navbar dropdown */
+    nav ul ul {
+        display: none;
+        position: absolute;
+        background: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }   
+
+    nav ul li:hover > ul {
+        display: block;
+    }
+
+/* Dropdown Menus */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px;
+}
+
+.navbar ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: inherit; /* Inherits the background color from navbar */
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li:hover .dropdown {
+    display: block;
+}
+
+.navbar ul li .dropdown li {
+    width: 200px;
+}
+
+.navbar ul li .dropdown li a {
+    padding: 10px;
+    background-color: inherit; /* Inherits the background color from navbar */
+}
+
+.navbar ul li .dropdown li a:hover {
+    background-color: #555;
+}
+
+
+
+
+/* Gallery modal */
+    .modal {
+     display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    padding: 1em 0;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e0e0e0;
+}
+
+/* Main Content and Sidebar */
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background: #333;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+}
+
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0;
+}
+
+.sidebar-menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #000000;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Flex container for header content */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+   /* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Gallery Modal */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1em);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial-item h3 {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+    
+}
+
+
+
+}
+
+
+
+    /* Add the necessary CSS for the hero section and action items */
+
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: inline-block;
+}
+
+.take-action {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.take-action .actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.take-action .action-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.take-action .action-item:hover {
+    transform: translateY(-10px);
+}
+
+.take-action .action-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.take-action .action-item h3 {
+    color: #4CAF50;
+    margin: 15px 0;
+}
+
+.take-action .action-item p {
+    color: #666;
+}
+
+.take-action .button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.take-action .button:hover {
+    background-color: #388E3C;
+}
+
+/* Duyarlılık Ayarları */
+@media (max-width: 768px) {
+    .take-action .actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.action-item {
+    flex: 1 1 calc(50% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.action-item.full-width {
+    flex: 1 1 100%;
+}
+
+.action-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.action-item {
+    flex: 1 1 calc(50% - 1em);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.action-item.full-width {
+    flex: 1 1 100%;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.action-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1em);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    /* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #388E3C;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1em 0;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+    background-color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul li a:active {
+    background-color: #388E3C;
+    color: white;
+}
+
+header nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul li:hover .dropdown {
+    display: block;
+}
+
+header nav ul li .dropdown li {
+    width: 200px;
+}
+
+header nav ul li .dropdown li a {
+    padding: 10px;
+    display: block;
+}
+
+header nav ul li .dropdown li a:hover {
+    background-color: #388E3C;
+    color: white;
+}
+
+
+}
+

@@ -1,0 +1,16 @@
+<div class="gallery">
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo1.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo1_thumbnail.jpg') }}" alt="Photo 1">
+    </div>
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo2.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo2_thumbnail.jpg') }}" alt="Photo 2">
+    </div>
+    <div class="gallery-item" data-image="{{ url_for('static', filename='images/photo3.jpg') }}">
+        <img src="{{ url_for('static', filename='images/photo3_thumbnail.jpg') }}" alt="Photo 3">
+    </div>
+</div>
+
+<div class="modal" id="gallery-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>

@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<h1>Past Calculations</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Distance (km)</th>
+        <th>Fuel Efficiency (km/l)</th>
+        <th>Carbon Footprint (kg CO2)</th>
+    </tr>
+    {% for calc in calculations %}
+    <tr>
+        <td>{{ calc.id }}</td>
+        <td>{{ calc.distance }}</td>
+        <td>{{ calc.fuel_efficiency }}</td>
+        <td>{{ calc.carbon_footprint }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

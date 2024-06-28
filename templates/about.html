@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+                <span>Environment Website</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="{{ url_for('about_carbon_footprint') }}">About Carbon Footprint</a></li>
+                            <li><a href="{{ url_for('reduce') }}">Reduce Pollution</a></li>
+                            <li><a href="{{ url_for('global_efforts') }}">Global Efforts</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('calculate') }}">Calculate Carbon Footprint</a></li>
+                    <li><a href="{{ url_for('view_calculations') }}">View Calculations</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Learn about our mission, vision, and goals.</p>
+                <div class="buttons">
+                    <a href="{{ url_for('mission_goals') }}" class="button">Our Mission and Goals</a>
+                </div>
+                <!-- Daha fazla içerik eklenebilir -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Environment Website. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

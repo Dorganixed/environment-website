@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('about_carbon_footprint') }}">About Carbon Footprint</a></li>
+                        <li><a href="{{ url_for('reduce') }}">Reduce Pollution</a></li>
+                        <li><a href="{{ url_for('studies') }}">Global Efforts</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('calculate') }}">Calculate Carbon Footprint</a></li>
+                <li><a href="{{ url_for('view_calculations') }}">View Calculations</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
